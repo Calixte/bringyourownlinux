@@ -26,6 +26,7 @@ source "qemu" "baremetal" {
   cpus        = 2
   memory      = 2048
   headless    = true
+  efi         = true
 
   communicator              = "ssh"
   ssh_username              = "packer"

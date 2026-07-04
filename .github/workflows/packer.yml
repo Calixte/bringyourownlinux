@@ -29,7 +29,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
-            qemu-system-x86 qemu-utils guestfs-tools genisoimage
+            ovmf qemu-system-x86 qemu-utils guestfs-tools genisoimage
       - name: Install Packer
         uses: hashicorp/setup-packer@main
         with:
