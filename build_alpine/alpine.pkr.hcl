@@ -8,12 +8,12 @@ packer {
 }
 
 source "qemu" "baremetal" {
-  # Official Alpine cloud image: BIOS firmware + cloud-init + bare-metal variant.
+  # Official Alpine cloud image: UEFI firmware + cloud-init + bare-metal variant.
   # Alpine has no "latest" symlink for cloud images, so the version is pinned and
   # bumped explicitly (Renovate-friendly). provision.sh collapses the image to a
   # single partition.
-  iso_url      = "https://dl-cdn.alpinelinux.org/alpine/v3.22/releases/cloud/nocloud_alpine-3.22.1-x86_64-bios-cloudinit-metal-r0.qcow2"
-  iso_checksum = "file:https://dl-cdn.alpinelinux.org/alpine/v3.22/releases/cloud/nocloud_alpine-3.22.1-x86_64-bios-cloudinit-metal-r0.qcow2.sha512"
+  iso_url      = "https://dl-cdn.alpinelinux.org/alpine/v3.22/releases/cloud/nocloud_alpine-3.22.1-x86_64-uefi-cloudinit-metal-r0.qcow2"
+  iso_checksum = "file:https://dl-cdn.alpinelinux.org/alpine/v3.22/releases/cloud/nocloud_alpine-3.22.1-x86_64-uefi-cloudinit-metal-r0.qcow2.sha512"
   disk_image   = true
   disk_size    = "3G"
 
