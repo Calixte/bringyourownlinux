@@ -88,6 +88,8 @@ finalize() {
 
     # Regenerate the initramfs for the installed kernel (uname -r is the rescue
     # kernel here, so take the version from /lib/modules).
+    # Pre-load NVMe early so mdadm can assemble arrays on NVMe hardware.
+    echo nvme >> /etc/modules
     local kernel_version
     kernel_version="$(ls -1 /lib/modules | head -n1)"
     mkinitfs "$kernel_version"
